@@ -12,7 +12,7 @@ X = data.drop('target', axis=1)  # fitur
 y = data['target']  # target
 
 # Bagi data menjadi data latih dan uji
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=40)
 
 # Membangun dan melatih model regresi logistik
 model = LogisticRegression()
@@ -32,7 +32,7 @@ print(conf_matrix)
 
 plt.scatter(X, y, color='blue', label='Data Aktual')  # Data aktual
 plt.plot(X, model.predict_proba(X)[:, 1], color='red', label='Probabilitas Positif')  # Probabilitas kelas positif
-plt.title('Regresi Logistik Sederhana')
+plt.title('Regresi Logistik Coba')
 plt.xlabel('X')
 plt.ylabel('Probabilitas kelas 1')
 plt.legend()
