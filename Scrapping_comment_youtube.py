@@ -18,7 +18,7 @@ def get_comments(youtube, video_id):
   request = youtube.commentThreads().list(
       part="snippet",
       videoId=video_id,
-      maxResults=100  # Maksimum komentar yang akan diambil
+      maxResults=1000  # Maksimum komentar yang akan diambil
   )
   while request:
     response = request.execute()
